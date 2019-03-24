@@ -4,10 +4,10 @@ import path from 'path';
 export default {
 
   mode  : 'development',
-  entry : './app/main.js',
+  entry : './src/main.js',
 
   output : {
-    path : path.resolve( __dirname, 'app' ),
+    path : path.resolve( __dirname, 'src' ),
     filename : 'main.bundle.js',
   },
 

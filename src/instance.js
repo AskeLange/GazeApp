@@ -2,25 +2,32 @@
 
 // Imports
 import React from 'react';
-import SigninView from './views/signin';
-import SubContainerView from './views/subcontainer';
+import { hot } from 'react-hot-loader';
 
 // App Instance
-export default class Instance
+export default hot (module) (class Instance 
   extends React.Component {
+
+  // Constructor
+  constructor (props) {
+    super (props);
+    this.state = {
+      counter: 0,
+    };
+  }
 
   // Render
   render () { return (
 
     <div id="views">
       <div id="views-inner">
-
-        <SigninView store={this.props.store} />
-        <SubContainerView store={this.props.store} />
-
+        Cool Counter: {this.state.counter}!<br />
+        <button onClick={() => {
+          this.setState ({ counter: this.state.counter+1 })
+        }}>Increment</button>
       </div>
     </div>
 
   )}
 
-} 
+});

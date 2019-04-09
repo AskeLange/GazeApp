@@ -2,11 +2,11 @@
   "name": "gazeapp",
   "version": "1.0.0",
   "description": "",
-  "main": "app.babel.js",
+  "main": "server.js",
   "scripts": {
     "debug": "webpack --watch",
-    "minify": "webpack --watch -p",
-    "start": "electron ."
+    "minify": "webpack --watch -p", 
+    "start": "webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,10 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
     "css-loader": "^2.1.0",
     "electron": "^4.0.0",
+    "express": "^4.16.4",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -33,6 +35,10 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.3.0"
+  },
+  "dependencies": {
+    "react-hot-loader": "^4.8.3"
   }
 }

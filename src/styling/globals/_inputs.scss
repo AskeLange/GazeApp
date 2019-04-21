@@ -1,0 +1,26 @@
+
+
+// Text fields
+input[type="text"],
+input[type="password"] {
+
+  // Normalization
+  border: none;
+  outline: none;
+  font-family: $font-stack;
+
+  // Other
+  height: 48px;
+  padding: 0 20px;
+  background-color: $seco;
+  color: $prim;
+  border-radius: 3px;
+
+  // Hover
+  &:hover {
+
+    background-color: lighten($seco, 5%);
+
+  }
+
+}

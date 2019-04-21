@@ -4,6 +4,10 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
+// Views
+import SigninView from './views/signin';
+import HomeView from './views/home';
+
 // App Instance
 export default hot (module) (class Instance 
   extends React.Component {
@@ -20,12 +24,8 @@ export default hot (module) (class Instance
   render () { return (
 
     <div id="views">
-      <div id="views-inner">
-        Cool Counter: {this.state.counter}!<br />
-        <button onClick={() => {
-          this.setState ({ counter: this.state.counter+1 })
-        }}>Increment</button>
-      </div>
+      <SigninView store={this.props.store} />
+      <HomeView store={this.props.store} />
     </div>
 
   )}

@@ -1,0 +1,62 @@
+
+
+// Fields
+$font-stack: 'Poppins', sans-serif;
+$trans-base: cubic-bezier(.9,0,.1,1);
+$prim: #f2f2f2;
+$seco: #191919;
+$x_tert: #DC136C;
+$tert: #62929E;
+
+// Main sjiz
+body {
+
+  margin: 0;
+  color: $seco;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  // tmp
+  font-family: $font-stack;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  #views {
+
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    .view {
+
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      
+      transition: 400ms $trans-base;
+      transform: scale(1.2);
+      opacity: 0;
+      z-index: 0;
+
+      color: $seco;
+      background-color: $prim;
+
+      &.active {
+
+        transform: scale(1);
+        opacity: 1;
+        z-index: 1;
+
+      }
+
+    }
+
+  }
+
+}
+
+// Imports
+@import './globals/inputs';
+@import './views/singin';

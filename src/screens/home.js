@@ -58,6 +58,7 @@ export default class HomeScreen
 
         {/* Views */}
         <div className="views">
+          Eyoo
         </div>
 
       </div>

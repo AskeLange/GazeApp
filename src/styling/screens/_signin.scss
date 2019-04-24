@@ -1,0 +1,75 @@
+
+
+// Singin screen
+#signin .content-container {
+
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+
+  form {
+
+    input {
+
+      display: block;
+      padding: 16px 24px;
+      font-size: 14px;
+
+      width: 256px;
+      height: 48px;
+
+      margin-top: 12px;
+      &:nth-child(1) { margin-top: 0; }
+
+    }
+
+    .buttons {
+
+      .button {
+
+        position: relative;
+        display: inline-block;
+        margin-top: 16px;
+        width: calc(50% - 8px);
+        height: 48px;
+
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+        cursor: pointer;
+
+        color: $prim;
+        background-color: $seco;
+       
+        &:nth-child(1) {
+          
+          margin-right: 16px;
+
+        }
+
+        &:hover { 
+          
+          background-color: lighten($seco, 5%); 
+        
+        }
+
+        svg {
+
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%,-50%);
+          fill: $prim;
+          width: 16px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
